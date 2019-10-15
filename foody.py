@@ -6,7 +6,8 @@ URL = "http://www.aivomenu.se/ShowMenu.aspx?MenuId=362&lang=sv-SE"
 # anything containing something in this list will be removed from the output, capitalization independent
 FILTERED_WORDS = ["måndag", "tisdag", "torsdag", "fredag", "onsdag", "skollunch", "idag", "startsida", "skriv ut"]
 TODAY = "idag"
-DAYS = ["måndag", "tisdag", "onsdag", "torsdag", "fredag"]
+# idag is in this to fix an issue where _get_today_divs() will include idags values in the previous day
+DAYS = ["idag", "måndag", "tisdag", "onsdag", "torsdag", "fredag"]
 # returns the soup of the URL constant
 def _get_soup():
 	page = requests.get(URL)
