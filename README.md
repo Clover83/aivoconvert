@@ -16,7 +16,7 @@ by default these tags work fine:
 <p data-food="full">This will be replaced by both, separated by a joiner</p>
 ```
 
-This will by default generate a file called "output.html" in the current working directory but this can be changed by simply appending the output path:
+This will by default generate a file called "output.html" in the current working directory but this can be changed by simply adding the output path:
 
 `aivoconvert.py /path/to/the/input.html /path/to/the/output_file.html`
 
