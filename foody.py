@@ -59,7 +59,9 @@ def _get_filtered_list(a_list):
 				a_list.remove(item)
 	return a_list
 
-def get_food(day=TODAY):
+def get_food(day=None):
+	if day == None:
+		day = TODAY
 	# this could all be written as one line, but this is better for readability
 	soup = _get_soup()
 	if soup != None:
