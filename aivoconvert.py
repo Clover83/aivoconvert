@@ -3,6 +3,8 @@ import foody
 import html
 from pathlib import Path
 
+
+# Default optional argument variables
 _joiner = " | "
 _attribute = "data-food"
 _full_val = "full"
@@ -15,8 +17,6 @@ def refresh(input_file_path, output_file_path, day, joiner, attribute, full_val)
 	food = joiner.join(food)
 	inj.replace({"attrs" : {attribute : full_val}}, html.escape(food))
 	inj.apply()
-
-
 
 _DESCRIPTION = """
 Parses a html file for tags with a specific attribute

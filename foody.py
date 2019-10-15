@@ -3,6 +3,7 @@
 from bs4 import BeautifulSoup
 import requests
 
+# will need to be changed for language independence
 URL = "http://www.aivomenu.se/ShowMenu.aspx?MenuId=362&lang=sv-SE"
 # anything containing something in this list will be removed from the output, capitalization independent
 FILTERED_WORDS = ["måndag", "tisdag", "torsdag", "fredag", "onsdag", "skollunch", "idag", "startsida", "skriv ut"]
@@ -24,7 +25,6 @@ def _get_search_area(soup):
 def _strip_duplicates(a_list):
 	x = list(dict.fromkeys(a_list))
 	return x
-
 
 def _get_today_divs(divs, search_day=TODAY):
 	x = []
@@ -77,6 +77,8 @@ def _get_invalid_arg_blurb():
 	x = "Invalid argument, please use the days in Swedish, i.e: \"måndag torsdag\""
 	return x
 
+# should probably be rewritten to use the same system as in
+# aivoconvert.py, that being argparse
 if __name__ == "__main__":
 	import sys
 	if len(sys.argv) > 1:
