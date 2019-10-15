@@ -4,7 +4,7 @@ import html
 from pathlib import Path
 
 _joiner = " | "
-_attribute = "foody"
+_attribute = "data-food"
 _full_val = "full"
 
 def refresh(input_file_path, output_file_path, day, joiner, attribute, full_val):
