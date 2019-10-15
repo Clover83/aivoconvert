@@ -1,5 +1,3 @@
-# meant to be an importable module
-
 from bs4 import BeautifulSoup
 import requests
 

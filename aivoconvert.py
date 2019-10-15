@@ -1,8 +1,8 @@
+#!/usr/bin/python3
 import inject
 import foody
 import html
 from pathlib import Path
-
 
 # Default optional argument variables
 _joiner = " | "
