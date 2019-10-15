@@ -1,24 +1,31 @@
 from bs4 import BeautifulSoup
 
-def _get_soup(html_path):
-	f = open(html_path, "r")
-	soup = BeautifulSoup(f.read(), "html.parser")
-	f.close()
-	return soup
+class Injector:
+	def __init__(self, input_path, output_path):
+		self.input_path = input_path
+		self.output_path = output_path
+		# todo errorchecking
+		f = open(input_path, "r")
+		self.soup = BeautifulSoup(f.read(), "html.parser")
+		f.close()
 
-def _get_replaced_soup(html_path, attribute, string):
-	soup = _get_soup(html_path)
-	tags = soup.find_all(attrs={str(attribute):True})
-	for tag in tags:
-		tag.string = string
-	return soup
+	def replace(self, kwargs, string):
+		tags = self.soup.find_all(**kwargs)
+		for tag in tags:
+			tag.string = string
 
-# if output_path is None then it overwrites the original file
-def inject(input_path, attribute, string, output_path = None):
-	soup = _get_replaced_soup(input_path, attribute, string)
-	if output_path == None:
-		output_path = input_path
-	f = open(output_path, "w")
-	f.write(soup.prettify()) # not ideal, doesn't preserve original indentation
-	f.close()
+	def refresh_soup(self):
+		f = open(input_path, "r")
+		self.soup = BeautifulSoup(f.read(), "html.parser")
+		f.close()
+
+	def apply(self):
+		f = open(self.output_path, "w")
+		f.write(self.soup.prettify()) # not ideal, doesn't preserve original indentation
+		f.close()
+
+
+
+
+
 
