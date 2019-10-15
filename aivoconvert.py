@@ -25,7 +25,7 @@ and replaces the content of that tag with the days food.
 # aivoconvert input output --joiner " | " --attribute "foody" --full_val "full"
 if __name__ == "__main__":
 	import argparse
-	parser = argparse.ArgumentParser(description=DESCRIPTION)
+	parser = argparse.ArgumentParser(description=_DESCRIPTION)
 	
 	parser.add_argument("input", 
 		type=lambda p: Path(p).absolute(),
@@ -35,7 +35,7 @@ if __name__ == "__main__":
 		type=lambda p: Path(p).absolute(),
 		help="The output file, cwd by default.",
 		nargs="?",
-		default=Path(__file__).absolute().parent / "output.html")
+		default=Path.cwd() / "output.html")
 
 	parser.add_argument("-d", "--day",
 		type=str,
