@@ -4,7 +4,7 @@ Aivoconvert is a python script that looks through a html file for specific tags 
 
 
 ## Installation
-To install you need python3 installed and pip3, then you cd into the install directory and run:
+To install you need python3 and pip3 installed, then you cd into the install directory and run:
 
 `pip3 install -r requirements.txt`
 
