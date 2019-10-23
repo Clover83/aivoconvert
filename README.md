@@ -3,6 +3,12 @@
 Aivoconvert is a python script that looks through a html file for specific tags and generates a file which has replaced those tags with the days food, which is gotten from the site [Aivomenu](http://www.aivomenu.se).
 
 
+## Installation
+To install you need python3 installed and pip3, then you cd into the install directory and run:
+
+`pip3 install -r requirements.txt`
+
+
 ## Basic usage
 To use aivoconvert you need to give it an input:
 
