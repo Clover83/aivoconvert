@@ -26,6 +26,9 @@ This will by default generate a file called "output.html" in the current working
 
 `aivoconvert.py /path/to/the/input.html /path/to/the/output_file.html`
 
+### High level usage
+If you want to for example set up a webserver to run the script every day, you'd do so by writing a basic shell script with the command as you want it, then running that using cron or some other scheduling tool. The output file could go directly to the web server html directory but this requires correct premissions to be set up so it might be better to use a symlink in the html directory pointing to the output file.
+
 ## Example commands
 
 `aivoconvert.py example.html ../modified.html -d tisdag`
