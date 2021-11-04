@@ -1,6 +1,6 @@
 # Aivoconvert
 
-Aivoconvert is a python script that looks through a html file for specific tags and generates a file which has replaced those tags with the days food, which is gotten from the site [Aivomenu](http://www.aivomenu.se).
+Aivoconvert is a python script that looks through a html file for specific tags and generates a file which has replaced those tags with the day's food, which is fetched from the site [Aivomenu](http://www.aivomenu.se).
 
 
 ## Installation
@@ -40,7 +40,7 @@ This command specifies the day with `-d tisdag`, the same thing can be achieved 
 This command changes the joiner to be " || ", this means when using the full value in the attrubute the output will look like this:
 > Thaigryta med röd curry, mango och ris/matvete || Karibisk biff med lime och mynta dressing
 
-The joiner can be any string at all, but avoid using html and other special character as they will be escaped throught the html.escape() function.
+The joiner can be any string at all, but avoid using html and other special character as they will be escaped through the html.escape() function.
 
 `aivoconvert.py example.html ../modified.html --attribute data-mat`
 
