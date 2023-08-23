@@ -1,5 +1,7 @@
 # Aivoconvert
 
+**This project is old and wont receive any more updates. There are much better alternatives to do the same thing, I will leave it up as an archive in case the school needs to reference it in the future.**
+
 Aivoconvert is a python script that looks through a html file for specific tags and generates a file which has replaced those tags with the day's food, which is fetched from the site [Aivomenu](http://www.aivomenu.se).
 
 
